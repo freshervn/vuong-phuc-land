@@ -1,0 +1,56 @@
+.row-nth-re{
+    &:nth-child(even){
+        flex-direction: row-reverse !important;
+    }
+}
+.container,%container{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    @media (min-width: 576px){
+        max-width: 540px;
+    }
+    @media (min-width: 768px){
+    max-width: 720px;
+    }
+    @media (min-width: 992px){
+    max-width: 960px;
+    }
+    @media (min-width: 1200px){      
+        max-width: 1140px;        
+    }
+    @media (min-width: 1440px){      
+        max-width: 1260px;        
+    }
+}
+.container-fluid{
+    .container{
+        padding: 0;
+        @media (min-width:567px) {
+            padding: 1rem;
+        }
+    }
+}
+%box-shadow{
+    box-shadow:0 0.5rem 1rem rgba(0, 0, 0,0.15);
+} 
+%middle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+%square{
+    padding-top: 100%;
+    position: relative;
+    width: 100%;
+}
+@mixin my($height) {
+    margin-top: $height;
+    margin-bottom: $height;
+}
+.border-bottom-2{
+    border-bottom: 3px solid;
+}
