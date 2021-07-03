@@ -79,13 +79,12 @@
         }
     }
     &:hover{
-        @extend %hover15 ;
+        @extend %shine;
         figure{
             img{
                 width: 100%;
             }
         }
-        box-shadow:0 0.5rem 1rem var(--secondary2);
         blockquote{
             .price-cart{
                 .cart{

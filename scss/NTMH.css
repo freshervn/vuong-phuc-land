@@ -1315,9 +1315,13 @@
 
 .hv-shadow {
   position: relative;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
-.hv-shadow:hover::after {
+.hv-shadow::after {
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -1325,6 +1329,12 @@
   left: 0%;
   top: 0%;
   border-radius: 0%;
+  -webkit-box-shadow: 0 0 0px 0px var(--theme2);
+          box-shadow: 0 0 0px 0px var(--theme2);
+  z-index: -1;
+}
+
+.hv-shadow:hover::after {
   -webkit-box-shadow: 0 0 10px 5px var(--theme2);
           box-shadow: 0 0 10px 5px var(--theme2);
 }
@@ -1505,31 +1515,6 @@
           animation-iteration-count: infinite;
 }
 
-.NPG-product:hover figure {
-  position: relative;
-}
-
-.NPG-product:hover figure::before {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 2;
-  display: block;
-  content: '';
-  width: 0;
-  height: 0;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 100%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  opacity: 0;
-}
-
-.NPG-product:hover figure:hover::before {
-  -webkit-animation: circle .75s;
-  animation: circle .75s;
-}
-
 @-webkit-keyframes circle {
   0% {
     opacity: 1;
@@ -1566,6 +1551,75 @@
 .hv-bright:hover * {
   -webkit-filter: brightness(130%);
           filter: brightness(130%);
+}
+
+.hv-shine figure, .NPG-product:hover figure {
+  overflow: hidden;
+}
+
+.hv-shine figure::before, .NPG-product:hover figure::before {
+  position: absolute;
+  top: 0;
+  left: -75%;
+  z-index: 2;
+  display: block;
+  content: '';
+  width: 50%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0.3)));
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+  -webkit-transform: skewX(-25deg);
+  transform: skewX(-25deg);
+}
+
+.hv-shine:hover figure::before, .NPG-product:hover figure::before {
+  -webkit-animation: shine .75s;
+  animation: shine .75s;
+}
+
+@-webkit-keyframes shine {
+  100% {
+    left: 125%;
+  }
+}
+
+@keyframes shine {
+  100% {
+    left: 125%;
+  }
+}
+
+.hv-blur {
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.hv-blur img {
+  -webkit-filter: blur(0.5px);
+          filter: blur(0.5px);
+}
+
+.hv-blur:hover img {
+  -webkit-filter: blur(0);
+          filter: blur(0);
+}
+
+.hv-flip figure {
+  -webkit-transition: 0s;
+  transition: 0s;
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+.hv-flip:hover figure {
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
 }
 
 .top-right {
@@ -3118,11 +3172,6 @@ form.search a i {
 .NPG-product blockquote .price-cart .cart:hover img {
   -webkit-filter: invert(1);
           filter: invert(1);
-}
-
-.NPG-product:hover {
-  -webkit-box-shadow: 0 0.5rem 1rem var(--secondary2);
-          box-shadow: 0 0.5rem 1rem var(--secondary2);
 }
 
 .NPG-product:hover figure img {
