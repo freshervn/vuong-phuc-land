@@ -384,3 +384,21 @@
         }    
     }
 }
+.button-number-top-right {
+    position: relative;
+    .number {
+        position: absolute;
+        top: 0;
+        right: 0;
+        $font-size: 0.8em;
+        font-size: $font-size;
+        width: calc(#{$font-size} * 1.5);
+        height: calc(#{$font-size} * 1.5);
+        transform: translate(50%, -50%);
+        background-color: $theme-color-1;
+        border-radius: 50%;
+        color: white;
+        text-align: center;
+        line-height: calc(#{$font-size} * 1.6);
+    }
+}

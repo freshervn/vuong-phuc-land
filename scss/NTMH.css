@@ -3939,6 +3939,26 @@ footer.main .coppyright {
           box-shadow: 0 0 5px 5px var(--secondary2);
 }
 
+.button-number-top-right {
+  position: relative;
+}
+
+.button-number-top-right .number {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0.8em;
+  width: calc(0.8em * 1.5);
+  height: calc(0.8em * 1.5);
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+  background-color: #e0a52d;
+  border-radius: 50%;
+  color: white;
+  text-align: center;
+  line-height: calc(0.8em * 1.6);
+}
+
 .icon-sm {
   width: 1.6em !important;
   height: 1.6em !important;
