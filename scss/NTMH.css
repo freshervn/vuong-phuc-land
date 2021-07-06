@@ -428,7 +428,7 @@
 }
 
 .Lobster {
-  font-family: 'Lobster';
+  font-family: sans-serif;
 }
 
 .underline-dashed {
@@ -4459,7 +4459,7 @@ footer.main .coppyright {
 }
 
 @font-face {
-  src: url("../Lobster/Lobster-Regular.ttf");
+  src: 'san-script';
   font-family: "Lobster";
 }
 
