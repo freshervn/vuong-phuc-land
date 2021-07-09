@@ -2,12 +2,8 @@
 /* thiết lập chung */
 /*setup*/
 :root {
-  --theme:black;
-  --theme2:#4b73b8;
-  --theme-dark-mood:white;
-  --secondary:#394091;
-  --secondary2:#c3d565;
-  --hightlight:#e21f1b;
+  --theme:rgb(13, 68, 150);
+  --hightlight:rgb(254, 185, 53);
   --ultimate-gray: #939597;
   --dark-charcoal: #333;
   --color-alice: #f8f9fa;
@@ -19,16 +15,8 @@
   background: var(--theme) !important;
 }
 
-.bg-theme2 {
-  background: var(--theme2) !important;
-}
-
-.bg-secondary {
-  background: var(--secondary) !important;
-}
-
-.bg-secondary2 {
-  background: var(--secondary2) !important;
+.bg-highlight {
+  background: var(--hightlight) !important;
 }
 
 .bg-lightgray {
@@ -428,7 +416,7 @@
 }
 
 .Lobster {
-  font-family: sans-serif;
+  font-family: 'Lobster';
 }
 
 .underline-dashed {
@@ -2875,6 +2863,22 @@ form.search a i {
   position: relative;
 }
 
+.contain-banner .banner picture {
+  height: 400px;
+  width: 100%;
+  position: relative;
+  display: block;
+}
+
+.contain-banner .banner picture img {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
 .contain-banner .banner blockquote {
   position: absolute;
   top: 0;
@@ -3952,7 +3956,7 @@ footer.main .coppyright {
   height: calc(0.8em * 1.5);
   -webkit-transform: translate(50%, -50%);
           transform: translate(50%, -50%);
-  background-color: #e0a52d;
+  background-color: --theme;
   border-radius: 50%;
   color: white;
   text-align: center;
@@ -4459,8 +4463,8 @@ footer.main .coppyright {
 }
 
 @font-face {
-  src: 'san-script';
-  font-family: "Lobster";
+  src: url("../SVN-Futura Free/SVN-Futura Regular.otf");
+  font-family: "Futura";
 }
 
 @font-face {
@@ -4483,7 +4487,7 @@ body {
 }
 
 body * {
-  font-family: "Signika";
+  font-family: "Futura";
 }
 
 body *::first-letter {

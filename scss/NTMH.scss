@@ -1,12 +1,8 @@
 /* thiết lập chung */
 /*setup*/
 :root {
-    --theme:black;
-    --theme2:#4b73b8;   
-    --theme-dark-mood:white;
-    --secondary:#394091;
-    --secondary2:#c3d565;   
-    --hightlight:#e21f1b; 
+    --theme:rgb(13, 68, 150);
+    --hightlight:rgb(254, 185, 53); 
     --ultimate-gray: #939597;
     --dark-charcoal: #333;
     --color-alice: #f8f9fa;
@@ -14,17 +10,8 @@
     --popBox:101;
 }
 $lightPink: rgb(249, 235, 214);
-$theme-color-2: --theme-color-1;
-$theme-color-1-5: --theme-color-1-5;
-$theme-color-1: rgb(224, 165, 45);
-$font-color: #333333;
-$font-color-2: #555555;
-$font-color-3: #7f7f7f;
-$font-style: "Open Sans", sans-serif;
-$font-style-2: "Open Sans", sans-serif;
-$ultimate-gray: #939597;
-$dark-charcoal: #333;
-$color-alice: #f8f9fa;
+$theme:--theme;
+$hightlight: --hightlight;
 @import 'color';
 @import 'text';
 @import 'bootrap';
@@ -56,8 +43,8 @@ $color-alice: #f8f9fa;
 @import 'gioi-thieu-ve-ngp';
 @import 'tuyendung';
 @font-face{
-    src:  'san-script';
-    font-family: "Lobster";
+    src: url('../SVN-Futura Free/SVN-Futura Regular.otf');    
+    font-family: "Futura";    
 }
 @font-face{
     src: url('../Signika/Signika-VariableFont_wght.ttf');
@@ -73,7 +60,7 @@ html{
 body {
     background: ghostwhite;
     *{
-        font-family: "Signika" ;
+        font-family: "Futura" ;
     }  
     *::first-letter {
         text-transform: uppercase;
